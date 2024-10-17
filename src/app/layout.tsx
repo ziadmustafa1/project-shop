@@ -34,7 +34,7 @@ export default function RootLayout({
           <Header/>
         </div>
         {children}
-        <div className="flex justify-center">
+        <div className="flex justify-center bg-white pt-10">
           <Footer/>
         </div>
       </body>

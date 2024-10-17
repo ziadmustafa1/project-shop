@@ -1,3 +1,4 @@
+"use client"
 import { useState } from 'react'
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -22,10 +23,18 @@ interface Product {
 }
 
 const products: Product[] = [
-  { id: 1, name: '"ONELINE basic" iron-gray', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20from%202024-10-17%2015-53-50-2PNhxDw3V6yzd0LdDGWavA2XYBfQRC.png', price: 350, originalPrice: 700, outOfStock: true, onSale: false },
-  { id: 2, name: '" JUST ONELINE " offwhite', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20from%202024-10-17%2015-53-50-2PNhxDw3V6yzd0LdDGWavA2XYBfQRC.png', price: 299, originalPrice: 750, outOfStock: false, onSale: true },
-  { id: 3, name: '"BMW M3 GTR " iron-gray', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20from%202024-10-17%2015-53-50-2PNhxDw3V6yzd0LdDGWavA2XYBfQRC.png', price: 450, outOfStock: true, onSale: false },
-  { id: 4, name: '" BMW M3 GTR " offwhite', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20from%202024-10-17%2015-53-50-2PNhxDw3V6yzd0LdDGWavA2XYBfQRC.png', price: 450, outOfStock: true, onSale: false },
+  { id: 1, name: '"ONELINE basic" iron-gray', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 350, originalPrice: 700, outOfStock: true, onSale: false },
+  { id: 2, name: '" JUST ONELINE " offwhite', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 299, originalPrice: 750, outOfStock: false, onSale: true },
+  { id: 3, name: '"BMW M3 GTR " iron-gray', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 450, outOfStock: true, onSale: false },
+  { id: 4, name: '" BMW M3 GTR " offwhite', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 450, outOfStock: true, onSale: false },
+  { id: 1, name: '"ONELINE basic" iron-gray', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 350, originalPrice: 700, outOfStock: true, onSale: false },
+  { id: 2, name: '" JUST ONELINE " offwhite', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 299, originalPrice: 750, outOfStock: false, onSale: true },
+  { id: 3, name: '"BMW M3 GTR " iron-gray', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 450, outOfStock: true, onSale: false },
+  { id: 4, name: '" BMW M3 GTR " offwhite', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 450, outOfStock: true, onSale: false },
+  { id: 1, name: '"ONELINE basic" iron-gray', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 350, originalPrice: 700, outOfStock: true, onSale: false },
+  { id: 2, name: '" JUST ONELINE " offwhite', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 299, originalPrice: 750, outOfStock: false, onSale: true },
+  { id: 3, name: '"BMW M3 GTR " iron-gray', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 450, outOfStock: true, onSale: false },
+  { id: 4, name: '" BMW M3 GTR " offwhite', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 450, outOfStock: true, onSale: false },
 ]
 
 export default function ProductGrid() {

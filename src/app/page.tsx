@@ -1,8 +1,18 @@
-
+import Card from './_components/home/Card'
+import Swiper from './_components/home/Swiper'
 export default function Home() {
 	return (
-		<div className="main-div">
-			<h1>Hello World</h1>
-		</div>
+		<div>
+      <Swiper/>
+      <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
+      <div>
+        <h1 className='flex justify-center text-5xl py-10'>
+        whats app
+        </h1>
+      </div>
+    </div>
 	);
 }

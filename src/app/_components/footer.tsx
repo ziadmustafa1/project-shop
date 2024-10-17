@@ -6,10 +6,10 @@ export default function Footer() {
      <div className="text-6xl font-bold flex justify-center">O</div>
      <div>
      <ul className="flex space-x-4 mt-3 font-bold">
-          <li><a href="#" className="hover:text-gray-600">Home</a></li>
-          <li><a href="#" className="hover:text-gray-600">Shop</a></li>
-          <li><a href="#" className="hover:text-gray-600">Contact</a></li>
-          <li><a href="#" className="hover:text-gray-600">privacy-policy</a></li>
+          <li><a href="home" className="hover:text-gray-600">Home</a></li>
+          <li><a href="shop" className="hover:text-gray-600">Shop</a></li>
+          <li><a href="contact" className="hover:text-gray-600">Contact</a></li>
+          <li><a href="privacy-policy" className="hover:text-gray-600">privacy-policy</a></li>
         </ul>
      </div>
      <div className="flex justify-center mt-5 pb-10 space-x-4">

@@ -1,6 +1,6 @@
 
 export default function privacy() {
   return (
-    <div>page</div>
+    <div className=" text-center">Privacy Policy</div>
   )
 };

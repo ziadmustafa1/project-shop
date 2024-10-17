@@ -30,10 +30,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div>
+        <div className="sticky top-0 z-50 bg-white w-full">
           <Header/>
         </div>
+        <div className="">
         {children}
+        </div>
         <div className="flex justify-center bg-white pt-10">
           <Footer/>
         </div>

@@ -68,7 +68,9 @@ export default function ProductGrid() {
         {sortedProducts.map((product) => (
           <Card key={product.id} className="overflow-hidden">
             <div className="relative h-64">
+              <a href="product-page">
               <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+              </a>
               {product.outOfStock && (
                 <Badge variant="destructive" className="absolute top-2 left-2">Out of stock</Badge>
               )}
@@ -85,6 +87,12 @@ export default function ProductGrid() {
                 {product.originalPrice && (
                   <span className="text-sm text-muted-foreground line-through ml-2">{product.originalPrice} EGP</span>
                 )}
+                <div className="flex justify-center">
+                <a href="product-page" className="flex px-10 justify-center bg-black text-white py-2 rounded-full"
+            >
+              Select options
+            </a>
+            </div>
               </div>
             </CardFooter>
           </Card>

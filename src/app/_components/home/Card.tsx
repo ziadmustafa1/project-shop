@@ -1,5 +1,6 @@
 "use client"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
 interface Product {
@@ -15,7 +16,7 @@ const products: Product[] = [
   { name: '"ONELINE basic" iron-gray', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 350, originalPrice: 700, outOfStock: true },
   { name: '"KING OF CLOUD" BLACK', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 420, originalPrice: 750, onSale: true },
   { name: '"KING OF CLOUD" offwhite', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 420, originalPrice: 750, outOfStock: true },
-  { name: '"ONELINE tie dye" gray on white (handmade)', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 450, originalPrice: 600, onSale: true },
+  { name: '"ONELINE tie dye" gray on white', image: 'https://wuilt-assets-v2-dev.s3.amazonaws.com/clzy8zzb909jj01n3e7kz1q2k_18.png', price: 450, originalPrice: 600, onSale: true },
 ]
 
 export default function BestSellerGrid() {
@@ -26,7 +27,9 @@ export default function BestSellerGrid() {
         {products.map((product, index) => (
           <Card key={index} className="overflow-hidden">
             <div className="relative h-80">
+              <a href="product-page">
               <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+              </a>
               {product.outOfStock && (
                 <Badge variant="destructive" className="absolute top-2 left-2">Out of stock</Badge>
               )}
@@ -38,9 +41,17 @@ export default function BestSellerGrid() {
               <h3 className="font-semibold text-sm mb-2">{product.name}</h3>
             </CardContent>
             <CardFooter className="p-4 pt-0 flex justify-between items-center">
-              <div>
+              <div className="">
+                <div className="mb-2">
                 <span className="text-lg font-bold">{product.price} EGP</span>
                 <span className="text-sm text-muted-foreground line-through ml-2">{product.originalPrice} EGP</span>
+                </div>
+                <div className="flex justify-center">
+                <a href="product-page" className="flex px-10 justify-center bg-black text-white py-2 rounded-full"
+            >
+              Select options
+            </a>
+            </div>
               </div>
             </CardFooter>
           </Card>

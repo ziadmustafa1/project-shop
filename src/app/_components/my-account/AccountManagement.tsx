@@ -71,7 +71,9 @@ export default function AccountManagement() {
             <ShoppingBag className="mx-auto h-12 w-12 text-gray-400" />
             <p className="mt-2 text-xl font-semibold">There are no orders yet!</p>
             <p className="text-gray-500">Looks like you haven't placed any orders</p>
+            <a href='shop'>
             <Button className="mt-4">Start Shopping</Button>
+            </a>
           </div>
         </TabsContent>
         <TabsContent value="addresses">

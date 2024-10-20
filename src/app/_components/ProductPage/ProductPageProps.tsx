@@ -69,13 +69,15 @@ export default function ProductPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="flex items-center text-sm mb-4">
+      <div>
+        <a href='shop' className="flex items-center text-sm mb-4">
         <ChevronLeft className="w-4 h-4 mr-1" />
         <span className="text-gray-500">Shop</span>
+        </a>
       </div>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="space-y-4">
-          <div className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden">
+          <div className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden" style={{width:"90%",height:"60%",}}>
             {product.images.length > 0 ? (
               <Image
                 src={product.images[currentImage]}
@@ -120,7 +122,7 @@ export default function ProductPage() {
               {product.images.map((img, index) => (
                 <button
                   key={index}
-                  className={`flex-shrink-0 w-20 h-20 relative ${index === currentImage ? 'ring-2 ring-primary' : ''}`}
+                  className={`flex-shrink-0 w-16 h-16 relative ${index === currentImage ? 'ring-2 ring-primary' : ''}`}
                   onClick={() => setCurrentImage(index)}
                 >
                   <Image src={img} alt={`${product.name} thumbnail ${index + 1}`} layout="fill" objectFit="cover" className="rounded" />

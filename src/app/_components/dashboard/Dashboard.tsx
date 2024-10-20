@@ -103,6 +103,10 @@ export default function Dashboard() {
                   <Label htmlFor="product-images">Product Images</Label>
                   <Input id="product-images" type="file" multiple onChange={handleImageUpload} accept="image/*" />
                 </div>
+                <div>
+                  <Label htmlFor="product-images">Product hoverImage</Label>
+                  <Input id="product-hoverImage" type="file" multiple onChange={handleImageUpload} accept="image/*" />
+                </div>
                 <Button type="submit">Add Product</Button>
               </form>
             </CardContent>
